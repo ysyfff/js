@@ -93,3 +93,71 @@ $(document).ready(function(){
     //$('tr:odd').addClass('alt');
     $('#oe tr:odd').addClass('alt');//this is the most exact one !!!!!!!!!
 });
+
+//10.1
+/*$(document).ready(function(){
+    $('#switcher-default').bind('click', function(){
+        $('body').removeClass('narrow');
+        $('body').removeClass('large');
+        $('#switcher .button').removeClass('selected');
+        $(this).addClass('selected');
+    });
+    $('#switcher-large').bind('click', function(){
+        $('body').addClass('large');
+        $('body').removeClass('narrow');
+        $('#switcher .button').removeClass('selected');
+        $(this).addClass('selected');
+    });
+    $('#switcher-narrow').bind('click', function(){
+        $('body').addClass('narrow');
+        $('body').removeClass('large');
+        $('#switcher .button').removeClass('selected');
+        $(this).addClass('selected');
+    });
+});*/
+//10.2
+/*$(document).ready(function(){
+    $('#switcher-default').bind('click', function(){
+        $('body').removeClass('narrow').removeClass('large');
+    });
+    $('#switcher-large').bind('click', function(){
+        $('body').addClass('large').removeClass('narrow');
+    });
+    $('#switcher-narrow').bind('click', function(){
+        $('body').addClass('narrow').removeClass('large');
+    });
+    $('#switcher .button').bind('click', function(){
+        $('#switcher .button').removeClass('selected');
+        $(this).addClass('selected');
+    });
+});*/
+//10.3
+$(document).ready(function(){
+    $('#switcher-default').bind('click', function(){
+        $('body').removeClass();
+    });
+    $('#switcher-large').bind('click', function(){
+        $('body').removeClass().addClass('large');
+    });
+    $('#switcher-narrow').bind('click', function(){
+        $('body').removeClass().addClass('narrow');
+    });
+    $('#switcher .button').bind('click', function(){
+        $('#switcher .button').removeClass('selected');
+        $(this).addClass('selected');
+    });
+});
+//10.4
+/*$(document).ready(function(){
+    $('#switcher .button').bind('click', function{
+        $('body').removeClass();
+        if(this.id=='switcher-narrow'){
+            $('body').addClass('narrow');
+        }
+        else if(this.id=='switcher-large'){
+            $('body').addClass('large');
+        }
+        $('#switcher .button').removeClass('selected');
+        $(this).addClass('selected');
+    });
+});*/
