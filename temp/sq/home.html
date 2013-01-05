@@ -52,5 +52,18 @@
             Last Name:<input type="text" name="lastName"/><br/>
             <input type="submit"/>
         </form>
+        8-----------------------<br/>
+        预缓存图像
+        <br/>
+        <img src="{{STATIC_URL}}img/logo.png" name="thumbnail" height="90" width="120">
+        <form>
+            <select name="cached" onchange="loadCached(this)">
+                <option value="image1">bands</option>
+                <option value="image2">ysyong</option>
+                <option value="image3">lcyang</option>
+                <option value="image4">lcwen</option>
+            </select>
+        </form>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
     </body>
 </html>

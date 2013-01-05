@@ -71,3 +71,18 @@ function checkForm(form){
     }
     return true;
 }
+
+//8
+var imageLibrary = new Array();
+imageLibrary["image1"]=new Image(120, 90);
+imageLibrary["image1"].src="/static/img/deal.gif";
+imageLibrary["image2"]=new Image(120, 90);
+imageLibrary["image2"].src="/static/img/del.gif";
+imageLibrary["image3"]=new Image(120, 90);
+imageLibrary["image3"].src="/static/img/pencil.png";
+imageLibrary["image4"]=new Image(120, 90);
+imageLibrary["image4"].src="/static/img/redy.gif";
+function loadCached(list){
+    var img = list.options[list.selectedIndex].value;
+    document.thumbnail.src=imageLibrary[img].src;
+}
