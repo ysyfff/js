@@ -86,3 +86,10 @@ function loadCached(list){
     var img = list.options[list.selectedIndex].value;
     document.thumbnail.src=imageLibrary[img].src;
 }
+
+//9
+$(document).ready(function(){
+    //$('tr').filter(':odd').addClass('alt');
+    //$('tr:odd').addClass('alt');
+    $('#oe tr:odd').addClass('alt');//this is the most exact one !!!!!!!!!
+});

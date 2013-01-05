@@ -1,2 +1,4 @@
 body{top:50px;color:#fff;background: url("/static/img/body.png/");
             font-size:18px;margin: auto; position: relative;width: 900px;}
+#oe tr{background: blue;}
+#oe tr.alt{background: red;}
