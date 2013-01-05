@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <link rel='stylesheet' type='text/css' href="{{STATIC_URL}}css/home.css" />
+        <script type="text/javascript" src="{{STATIC_URL}}js/jquery.js"></script>
+        <script type="text/javascript" src="{{STATIC_URL}}js/myjs.js"></script>
+    </head>
+    <body >
+        1------------------------
+        <form name="textform" onsubmit="return false">
+            <input type="text" name="converter" value="sample" onchange="upperMe()"/>
+        </form>
+        2------------------------
+        <form name="checkform" >
+            <input type="checkbox" name="checkThis"/>check here<br/>
+            <input type="button" value="Inspect box" onclick="inspectBox()"/>
+        </form>
+        3------------------------
+        <form name="radioform">
+            Select your favorite food!<br/>
+            <input type="radio" name="stooges" value="1">1<br/>
+            <input type="radio" name="stooges" value="2">2<br/>
+            <input type="radio" name="stooges" value="3">3<br/>
+            <input type="button" name="viewer" value="view full name ..." onclick="fullName()">
+        </form>
+        4------------------------
+        <br/>go to
+        <form name="selectform">
+            <select name="urlList" onchange="goThere()">
+                <option selected value="http://www.google.com">Google</option>
+                <option value="http://www.baidu.com">Baidu</option>
+            </select>
+        </form>
+        5------------------------
+        <form name="thisobj">
+            Choose your favorite beatle:<br/>
+            <input type="radio" name="Beatles" value="John" checked>John<br/>
+            <input type="radio" name="Beatles" value="Paul" checked>Paul<br/>
+
+            Enter the name of a song:<br/>
+            <input type="text" name="song" value="I love you" onchange="verifySong(this)"><br/>
+            <input type="button" name="process" value="Process Request..." onclick="processData(this.form)">
+        </form>
+        6-----------------------
+        <form name="openwindow">
+            <input type="button" value="Create New window" onclick="makeNewWindow()"/>
+            <input type="button" value="Close New Window" onclick="closeNewWindow()"/>
+        </form>
+        7-----------------------<br/>
+        验证和提交表单
+        <form onsubmit="return checkForm(this)">
+            First Name:<input type="text" name="firstName"/><br/>
+            Last Name:<input type="text" name="lastName"/><br/>
+            <input type="submit"/>
+        </form>
+    </body>
+</html>
