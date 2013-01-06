@@ -197,7 +197,7 @@ $(document).ready(function(){
 });*/
 
 //10.9
-$(document).ready(function(){
+/*$(document).ready(function(){
     $('#switcher').click(function(event){
         if (!$(event.target).is('.button')){///////hide
             $('#switcher .button').toggleClass('hidden');
@@ -214,7 +214,7 @@ $(document).ready(function(){
             $(event.target).addClass('selected');
         }
     });
-});
+});*/
 /*$(document).ready(function(){
     $('#switcher').click(function(event){
         if ($(event.target).is('.button')){
@@ -230,3 +230,30 @@ $(document).ready(function(){
         }
     });
 });*/
+
+//10.10
+$(document).ready(function(){
+    $('#switcher').bind('click.collapse', function(event){
+        if(!$(event.target).is('.button')){
+            $('#switcher .button').toggleClass('hidden');
+        }
+    });
+    $('#switcher-narrow, #switcher-large').click(function(){
+        $('#switcher').unbind('click.collapse');
+    });
+});
+$(document).ready(function(){
+    $('#switcher').click(function(event){
+        if ($(event.target).is('.button')){
+            $('body').removeClass();
+            if(event.target.id =='switcher-narrow'){
+                $('body').addClass('narrow');
+            }
+            else if (event.target.id == 'switcher-large'){
+                $('body').addClass('large');
+            }
+            $('#switcher .button').removeClass('selected');
+            $(event.target).addClass('selected');
+        }
+    });
+});
