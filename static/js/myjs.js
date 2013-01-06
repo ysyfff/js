@@ -170,3 +170,12 @@ $(document).ready(function(){
         $('#switcher .button').removeClass('hidden');
     });
 });
+
+//12
+$(document).ready(function(){
+    $('#switcher .button').hover(function(){
+        $(this).addClass('hover');
+    }, function(){
+        $(this).removeClass('hover');
+    });
+});

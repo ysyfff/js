@@ -3,6 +3,7 @@ body{top:50px;color:#fff;background: url("/static/img/body.png/");
 #oe tr{background: blue;}
 #oe tr.alt{background: red;}
 #switcher{float:left;padding:10px;background-color:grey;}
+#switcher .hover{cursor: pointer;background: red;}
 .button{float:left;padding:10px;margin:10px;border:1px solid;}
 .selected{font-weight:bold; border: 2px solid blue;color:#000;}
 .narrow{font-size:22px;}
