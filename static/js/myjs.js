@@ -132,7 +132,7 @@ $(document).ready(function(){
     });
 });*/
 //10.3
-$(document).ready(function(){
+/*$(document).ready(function(){
     $('#switcher-default').bind('click', function(){
         $('body').removeClass();
     });
@@ -146,7 +146,7 @@ $(document).ready(function(){
         $('#switcher .button').removeClass('selected');
         $(this).addClass('selected');
     });
-});
+});*/
 //10.4
 /*$(document).ready(function(){
     $('#switcher .button').bind('click', function{
@@ -163,13 +163,13 @@ $(document).ready(function(){
 });*/
 
 //10.5
-$(document).ready(function(){
+/*$(document).ready(function(){
     $('#switcher h3').toggle(function(){
         $('#switcher .button').addClass('hidden');
     },function(){
         $('#switcher .button').removeClass('hidden');
     });
-});
+});*/
 
 //10.6
 $(document).ready(function(){
@@ -188,10 +188,45 @@ $(document).ready(function(){
 });*/
 
 //10.8
-$(document).ready(function(){
+/*$(document).ready(function(){
     $('#switcher').click(function(event){
         if(event.target==this){
             $('#switcher .button').toggleClass('hidden');
         }
     });
+});*/
+
+//10.9
+$(document).ready(function(){
+    $('#switcher').click(function(event){
+        if (!$(event.target).is('.button')){///////hide
+            $('#switcher .button').toggleClass('hidden');
+        }
+        else if ($(event.target).is('.button')){//////////////function
+            $('body').removeClass();
+            if(event.target.id =='switcher-narrow'){
+                $('body').addClass('narrow');
+            }
+            else if (event.target.id == 'switcher-large'){
+                $('body').addClass('large');
+            }
+            $('#switcher .button').removeClass('selected');
+            $(event.target).addClass('selected');
+        }
+    });
 });
+/*$(document).ready(function(){
+    $('#switcher').click(function(event){
+        if ($(event.target).is('.button')){
+            $('body').removeClass();
+            if(event.target.id =='switcher-narrow'){
+                $('body').addClass('narrow');
+            }
+            else if (event.target.id == 'switcher-large'){
+                $('body').addClass('large');
+            }
+            $('#switcher .button').removeClass('selected');
+            $(event.target).addClass('selected');
+        }
+    });
+});*/
