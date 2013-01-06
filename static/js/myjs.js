@@ -285,5 +285,19 @@ $(document).ready(function(){
             $(event.target).addClass('selected');
         }
     });
-    $('#switcher').trigger('click');
+    $(document).keyup(function(event){
+        switch(String.fromCharCode(event.keyCode)){
+            case 'D':
+                $('#switcher-default').click();
+                break;
+            case 'N':
+                $('#switcher-narrow').click();
+                break;
+            case 'L':
+                $('#switcher-large').click();
+                break;
+        }
+    });
+    //$('#switcher').trigger('click');
+    $('#switcher').click();
 });
