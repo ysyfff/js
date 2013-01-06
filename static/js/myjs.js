@@ -162,7 +162,7 @@ $(document).ready(function(){
     });
 });*/
 
-//11
+//10.5
 $(document).ready(function(){
     $('#switcher h3').toggle(function(){
         $('#switcher .button').addClass('hidden');
@@ -171,11 +171,27 @@ $(document).ready(function(){
     });
 });
 
-//12
+//10.6
 $(document).ready(function(){
     $('#switcher .button').hover(function(){
         $(this).addClass('hover');
     }, function(){
         $(this).removeClass('hover');
+    });
+});
+
+//10.7
+/*$(document).ready(function(){
+    $('#switcher').click(function(){
+        $('#switcher .button').toggleClass('hidden');
+    });
+});*/
+
+//10.8
+$(document).ready(function(){
+    $('#switcher').click(function(event){
+        if(event.target==this){
+            $('#switcher .button').toggleClass('hidden');
+        }
     });
 });
