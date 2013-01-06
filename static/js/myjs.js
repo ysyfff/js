@@ -285,4 +285,5 @@ $(document).ready(function(){
             $(event.target).addClass('selected');
         }
     });
+    $('#switcher').trigger('click');
 });
