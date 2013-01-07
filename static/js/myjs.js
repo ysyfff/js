@@ -301,3 +301,19 @@ $(document).ready(function(){
     //$('#switcher').trigger('click');
     $('#switcher').click();
 });
+//12
+$(document).ready(function(){
+    var $speech = $('div.speech');
+    var defaultSize = $speech.css('fontSize');
+    $('#switcher button').click(function(){
+        var num = parseFloat($speech.css('fontSize'), 10);
+        if(this.id == 'switcher1-large'){
+            num *= 1.4;
+        }else if(this.id=='switcher1-small'){
+            num /= 1.4;
+        }else{
+            num = parseFloat(defaultSize, 10);
+        }
+        $speech.css('fontSize', num+'px');
+    });
+});
