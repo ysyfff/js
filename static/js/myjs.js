@@ -316,7 +316,7 @@ $(document).ready(function(){
         }
         $speech.css('fontSize', num+'px');
     });
-    $('p:eq(1)').hide();
+    /*$('p:eq(1)').hide();
     $('a.less').hide();
     $('a.more').click(function(){
         //$('p:eq(1)').show(850);
@@ -330,6 +330,18 @@ $(document).ready(function(){
         $('p:eq(1)').fadeOut(850);
         $('a.more').show();
         $(this).hide();
+        return false;
+    });*/
+    var $firstPara = $('p:eq(1)');
+    $firstPara.hide();
+    $('a.more').click(function(){
+        if($firstPara.is(':hidden')){
+            $firstPara.fadeIn(850);
+            $(this).text('read less');
+        }else{
+            $firstPara.fadeOut(850);
+            $(this).text('read more');
+        }
         return false;
     });
 });
