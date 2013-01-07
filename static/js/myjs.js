@@ -367,11 +367,28 @@ $(document).ready(function(){
             });
         }else{
             $switcher
-            .animate({left:'0px'}, 'slow')
-            .animate({height:'-=20px'}, 'slow')
             .queue(function(){
                 $switcher.css('backgroundColor', 'grey').dequeue();
-            });
+            })
+            .animate({height:'-=20px'}, 'slow')
+            .animate({left:'0px'}, 'slow');
         }
     });
+
+    /*$('p:eq(2)').css('border', '1px solid red')
+    .click(function(){
+        $(this).slideUp('slow').next().slideDown('slow');
+    });
+    $('p:eq(3)').css('backgroundColor', '#ccc').hide();*/
+});
+$(document).ready(function(){
+    var $thirdPara = $('p:eq(2)');
+    $thirdPara
+    .css('border','1px solid red')
+    .click(function(){
+        $(this).next().slideDown('slow', function(){
+            $thirdPara.slideUp('slow');
+        });
+    });
+    $('p:eq(3)').css('backgroundColor', '#ccc').hide();
 });
