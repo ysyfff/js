@@ -348,3 +348,19 @@ $(document).ready(function(){
         return false;
     });
 });
+
+//13
+var clc=0;
+$(document).ready(function(){
+    $('div.label').click(function(){
+        clc++;
+        var paraWidth = $('div.speech p').outerWidth();
+        var $switcher = $(this).parent();
+        var switcherWidth = $switcher.outerWidth();
+        if (clc%2==1){
+            $switcher.animate({left:paraWidth-switcherWidth}, 'slow');
+        }else{
+            $switcher.animate({left:'0px'}, 'slow');
+        }
+    });
+});
