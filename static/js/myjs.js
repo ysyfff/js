@@ -307,14 +307,17 @@ $(document).ready(function(){
     var defaultSize = $speech.css('fontSize');
     $('#switcher button').click(function(){
         var num = parseFloat($speech.css('fontSize'), 10);
-        if(this.id == 'switcher1-large'){
-            num *= 1.4;
-        }else if(this.id=='switcher1-small'){
-            num /= 1.4;
-        }else{
-            num = parseFloat(defaultSize, 10);
+        switch(this.id){
+            case 'switcher1-large':
+                num *= 1.4;
+                break;
+            case 'switcher1-small':
+                num /= 1.4;
+                break;
+            default:
+                num = parseFloat(defaultSize, 10);
         }
-        $speech.css('fontSize', num+'px');
+        $speech.animate({fontSize:num+'px'}, 'slow');
     });
     /*$('p:eq(1)').hide();
     $('a.less').hide();
