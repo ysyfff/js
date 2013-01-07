@@ -319,13 +319,15 @@ $(document).ready(function(){
     $('p:eq(1)').hide();
     $('a.less').hide();
     $('a.more').click(function(){
-        $('p:eq(1)').show(850);
+        //$('p:eq(1)').show(850);
+        $('p:eq(1)').fadeIn(850);
         $('a.less').show();
         $(this).hide();
         return false;
     });
     $('a.less').click(function(){
-        $('p:eq(1)').hide(850);
+        //$('p:eq(1)').hide(850);
+        $('p:eq(1)').fadeOut(850);
         $('a.more').show();
         $(this).hide();
         return false;
