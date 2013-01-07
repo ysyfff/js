@@ -316,4 +316,18 @@ $(document).ready(function(){
         }
         $speech.css('fontSize', num+'px');
     });
+    $('p:eq(1)').hide();
+    $('a.less').hide();
+    $('a.more').click(function(){
+        $('p:eq(1)').show();
+        $('a.less').show();
+        $(this).hide();
+        return false;
+    });
+    $('a.less').click(function(){
+        $('p:eq(1)').hide();
+        $('a.more').show();
+        $(this).hide();
+        return false;
+    });
 });
