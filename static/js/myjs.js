@@ -358,9 +358,20 @@ $(document).ready(function(){
         var $switcher = $(this).parent();
         var switcherWidth = $switcher.outerWidth();
         if (clc%2==1){
-            $switcher.animate({left:paraWidth-switcherWidth}, 'slow');
+            $switcher
+            .animate({left:paraWidth-switcherWidth}, 'slow')
+            .animate({height:'+=20px'}, 'slow')
+            /*.css('backgroundColor', 'blue');*/
+            .queue(function(){
+                $switcher.css('backgroundColor', 'blue').dequeue();
+            });
         }else{
-            $switcher.animate({left:'0px'}, 'slow');
+            $switcher
+            .animate({left:'0px'}, 'slow')
+            .animate({height:'-=20px'}, 'slow')
+            .queue(function(){
+                $switcher.css('backgroundColor', 'grey').dequeue();
+            });
         }
     });
 });
