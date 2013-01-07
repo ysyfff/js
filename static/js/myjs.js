@@ -1,5 +1,6 @@
 //1. var field = document.forms["textform"].converter;=var field = document.forms[0].converter;
 function upperMe(){
+    hehe
     var field = document.forms["textform"].converter;
     var upperCaseVersion = field.value.toUpperCase();
     field.value = upperCaseVersion;
