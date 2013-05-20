@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+  <title>Universal vertical center with CSS</title>
+<style type="text/css">
+#outer {height: 400px; overflow: hidden; position: relative; border:1px solid red;}
+#outer[id] {display: table; position: static;}/*only IE 6 will ignore this*/
+
+#middle {position: absolute; top: 50%;} 
+#middle[id] {display: table-cell; vertical-align: middle; width: 100%; position: static;}/*only IE 6 will ignore this*/
+
+#inner {position: relative; top: -50%}
+</style>
+</head>
+
+<body>
+  <div id="outer">
+  <div id="middle">
+    <div id="inner">
+        any text<br>
+        any height<br>
+        any content, for example generated from DB<br>
+        everything is vertically centered
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>
