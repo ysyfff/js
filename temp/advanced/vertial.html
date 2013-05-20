@@ -3,13 +3,13 @@
 <head>
   <title>Universal vertical center with CSS</title>
 <style type="text/css">
-#outer {height: 400px; overflow: hidden; position: relative; border:1px solid red;}
+#outer {height: 400px; overflow: hidden; position: relative; border:1px solid red; width: 400px;}
 #outer[id] {display: table; position: static;}/*only IE 6 will ignore this*/
 
 #middle {position: absolute; top: 50%;} 
 #middle[id] {display: table-cell; vertical-align: middle; width: 100%; position: static;}/*only IE 6 will ignore this*/
 
-#inner {position: relative; top: -50%}
+#inner {position: relative; top: -50%; width: 200px; margin-left: auto; margin-right: auto;} 
 </style>
 </head>
 
@@ -17,6 +17,10 @@
   <div id="outer">
   <div id="middle">
     <div id="inner">
+        any text<br>
+        any height<br>
+        any content, for example generated from DB<br>
+        everything is vertically centered
         any text<br>
         any height<br>
         any content, for example generated from DB<br>
